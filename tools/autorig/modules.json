@@ -1,337 +1,350 @@
 {
     "leg": {
-        "hip": {
-            "aim": "knee", 
-            "world_up": "ancle",
-            "parent": null,
-            "rotation": 0.0,
-            "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "knee": {
-            "aim": "ancle",
-            "world_up": "hip",
-            "parent": "hip",
-            "rotation": 0.0,
-            "transform": [[0.0, -2.5, 0.3], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "ancle": {
-            "aim": "toe",
-            "world_up": null,
-            "parent": "knee",
-            "rotation": 0.0,
-            "transform": [[0.0, -4.6, 0.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "toe": {
-            "aim": "toeTip",
-            "world_up": null,
-            "parent": "ancle",
-            "rotation": 0.0,
-            "transform": [[0.0, -4.8, 1.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "toeTip": {
-            "aim": null,
-            "world_up": null,
-            "parent": "toe",
-            "rotation": 0.0,
-            "transform": [[0.0, -4.8, 1.5], [0.0, 0.0, 0.0]],
-            "radius": 1.0
+        "JOINTS": {
+            "hip": {
+                "aim": "knee",
+                "world_up": "ankle",
+                "parent": null,
+                "rotation": 0.0,
+                "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            },
+            "knee": {
+                "aim": "ankle",
+                "world_up": "hip",
+                "parent": "hip",
+                "rotation": 0.0,
+                "transform": [[0.0, -12.5, 1.5], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            },
+            "ankle": {
+                "aim": "toe",
+                "world_up": null,
+                "parent": "knee",
+                "rotation": 0.0,
+                "transform": [[0.0, -23.0, 0.0], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            },
+            "toe": {
+                "aim": "toeTip",
+                "world_up": null,
+                "parent": "ankle",
+                "rotation": 0.0,
+                "transform": [[0.0, -24.0, 5.0], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            },
+            "toeTip": {
+                "aim": null,
+                "world_up": null,
+                "parent": "toe",
+                "rotation": 0.0,
+                "transform": [[0.0, -24.0, 7.5], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            }
+
         },
         "BASE": {
             "matrix": [
-                1.0, 0.0, 0.0, 0.0,
-                0.0, 1.0, 0.0, 0.0,
-                0.0, 0.0, 1.0, 0.0,
-                0.0, 5.0, 0.0, 1.0
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 1.0, 0.0],
+                [0.0, 25.0, 0.0, 1.0]
             ],
             "shape": [
-                [0.0, 0.0, -1.0],
-                [0.707107, 0.0, -0.707107],
-                [1.0, 0.0, 0.0],
-                [0.707107, 0.0, 0.707107],
-                [0.0, 0.0, 1.0],
-                [-0.707107, 0.0, 0.707107],
-                [-1.0, 0.0, 0.0],
-                [-0.707107, 0.0, -0.707107],
-                [0.0, 0.0, -1.0]
-            ]
+                [0.0, 0.0, -5.0], 
+                [3.5, 0.0, -3.54], 
+                [5.0, 0.0, 0.0], 
+                [3.5, 0.0, 3.5], 
+                [0.0, 0.0, 5.0], 
+                [-3.5, 0.0, 3.5], 
+                [-5.0, 0.0, 0.0], 
+                [-3.5, 0.0, -3.5], 
+                [0.0, 0.0, -5.0]
+            ],
+            "mirrored":false,
+            "parent": null
         }
     },
     "arm": {
-        "shoulder": {
-            "aim": "elbow",
-            "world_up": null,
-            "parent": null,
-            "rotation": 0.0,
-            "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "elbow": {
-            "aim": "wrist",
-            "world_up": "shoulder",
-            "parent": "shoulder",
-            "rotation": 0.0,
-            "transform": [[0.0, -2.3, 0.3], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "wrist": {
-            "aim": "fingerTip",
-            "world_up": "shoulder",
-            "parent": "elbow",
-            "rotation": 0.0,
-            "transform": [[0.0, -4.6, 0.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
-        },
-        "fingerTip": {
-            "aim": null,
-            "world_up": null,
-            "parent": "wrist",
-            "rotation": 0.0,
-            "transform": [[0.0, -5.0, 0.0], [0.0, 0.0, 0.0]],
-            "radius": 1.0
+        "JOINTS": {
+            "shoulder": {
+                "aim": "elbow",
+                "world_up": "wrist",
+                "parent": null,
+                "rotation": 0.0,
+                "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+                "radius": 3.0
+            },
+            "elbow": {
+                "aim": "wrist",
+                "world_up": "shoulder",
+                "parent": "shoulder",
+                "rotation": 0.0,
+                "transform": [[0.0, -7.0, -2.0], [0.0, 0.0, 0.0]],
+                "radius": 2.0
+            },
+            "wrist": {
+                "aim": "fingerTip",
+                "world_up": "shoulder",
+                "parent": "elbow",
+                "rotation": 0.0,
+                "transform": [[0.0, -14.0, 0.0], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            },
+            "fingerTip": {
+                "aim": null,
+                "world_up": null,
+                "parent": "wrist",
+                "rotation": 0.0,
+                "transform": [[0.0, -15.0, 0.0], [0.0, 0.0, 0.0]],
+                "radius": 1.0
+            }
         },
         "BASE": {
             "matrix": [
-                1.0, 0.0, 0.0, 0.0,
-                0.0, 1.0, 0.0, 0.0,
-                0.0, 0.0, 1.0, 0.0,
-                0.0, 5.0, 0.0, 1.0
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 1.0, 0.0],
+                [0.0, 50.0, 0.0, 1.0]
             ],
             "shape": [
-                [0.0, 0.0, -1.0],
-                [0.707107, 0.0, -0.707107],
-                [1.0, 0.0, 0.0],
-                [0.707107, 0.0, 0.707107],
-                [0.0, 0.0, 1.0],
-                [-0.707107, 0.0, 0.707107],
-                [-1.0, 0.0, 0.0],
-                [-0.707107, 0.0, -0.707107],
-                [0.0, 0.0, -1.0]
-            ]
+                [0.0, 0.0, -5.0], 
+                [3.5, 0.0, -3.54], 
+                [5.0, 0.0, 0.0], 
+                [3.5, 0.0, 3.5], 
+                [0.0, 0.0, 5.0], 
+                [-3.5, 0.0, 3.5], 
+                [-5.0, 0.0, 0.0], 
+                [-3.5, 0.0, -3.5], 
+                [0.0, 0.0, -5.0]
+            ],
+            "mirrored":false,
+            "parent": null
         }
     },
     "hand": {
         "BASE": {
             "matrix": [
-                1.0, 0.0, 0.0, 0.0,
-                0.0, 1.0, 0.0, 0.0,
-                0.0, 0.0, 1.0, 0.0,
-                0.0, 1.0, 0.0, 1.0
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 1.0, 0.0],
+                [0.0, 0.0, 0.0, 1.0]
             ],
             "shape": [
-                [0.0, 0.0, -1.0],
-                [0.707107, 0.0, -0.707107],
-                [1.0, 0.0, 0.0],
-                [0.707107, 0.0, 0.707107],
-                [0.0, 0.0, 1.0],
-                [-0.707107, 0.0, 0.707107],
-                [-1.0, 0.0, 0.0],
-                [-0.707107, 0.0, -0.707107],
-                [0.0, 0.0, -1.0]
-            ]
+                [0.0, 0.0, -5.0], 
+                [3.5, 0.0, -3.54], 
+                [5.0, 0.0, 0.0], 
+                [3.5, 0.0, 3.5], 
+                [0.0, 0.0, 5.0], 
+                [-3.5, 0.0, 3.5], 
+                [-5.0, 0.0, 0.0], 
+                [-3.5, 0.0, -3.5], 
+                [0.0, 0.0, -5.0]
+            ],
+            "mirrored":false,
+            "parent": null
         },
-        "hand": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-            "parent": null,
-            "radius": 0.1
-        },
-        "thumbBase": {
-            "aim": "thumbPproximal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.3, 0.3], [0.0, 0.0, 0.0]],
-            "parent": "hand",
-            "radius": 0.1
-        },
-        "thumbPproximal": {
-            "aim": "thumbDistal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.6, 0.3], [0.0, 0.0, 0.0]],
-            "parent": "thumbBase",
-            "radius": 0.1
-        },
-        "thumbDistal": {
-            "aim": "thumbTip",
-            "rotation": 0.0,
-            "world_up": "thumbPproximal",
-            "transform": [[0.0, -0.8, 0.3], [0.0, 0.0, 0.0]],
-            "parent": "thumbPproximal",
-            "radius": 0.1
-        },
-        "thumbTip": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -1.0, 0.3], [0.0, 0.0, 0.0]],
-            "parent": "thumbDistal",
-            "radius": 0.1
-        },
-        "indexBase": {
-            "aim": "indexProximal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.3, 0.1], [0.0, 0.0, 0.0]],
-            "parent": "hand",
-            "radius": 0.1
-        },
-        "indexProximal": {
-            "aim": "indexMiddle",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.6, 0.1], [0.0, 0.0, 0.0]],
-            "parent": "indexBase",
-            "radius": 0.1
-        },
-        "indexMiddle": {
-            "aim": "indexDistal",
-            "rotation": 0.0,
-            "world_up": "indexProximal",
-            "transform": [[0.0, -0.8, 0.1], [0.0, 0.0, 0.0]],
-            "parent": "indexProximal",
-            "radius": 0.1
-        },
-        "indexDistal": {
-            "aim": "indexTip",
-            "rotation": 0.0,
-            "world_up": "indexMiddle",
-            "transform": [[0.0, -1.0, 0.1], [0.0, 0.0, 0.0]],
-            "parent": "indexMiddle",
-            "radius": 0.1
-        },
-        "indexTip": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -1.2, 0.1], [0.0, 0.0, 0.0]],
-            "parent": "indexDistal",
-            "radius": 0.1
-        },
-        "middleBase": {
-            "aim": "middleProximal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.3, -0.1], [0.0, 0.0, 0.0]],
-            "parent": "hand",
-            "radius": 0.1
-        },
-        "middleProximal": {
-            "aim": "middleMiddle",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.6, -0.1], [0.0, 0.0, 0.0]],
-            "parent": "middleBase",
-            "radius": 0.1
-        },
-        "middleMiddle": {
-            "aim": "middleDistal",
-            "rotation": 0.0,
-            "world_up": "middleProximal",
-            "transform": [[0.0, -0.8, -0.1], [0.0, 0.0, 0.0]],
-            "parent": "middleProximal",
-            "radius": 0.1
-        },
-        "middleDistal": {
-            "aim": "middleTip",
-            "rotation": 0.0,
-            "world_up": "middleMiddle",
-            "transform": [[0.0, -1.0, -0.1], [0.0, 0.0, 0.0]],
-            "parent": "middleMiddle",
-            "radius": 0.1
-        },
-        "middleTip": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -1.2, -0.1], [0.0, 0.0, 0.0]],
-            "parent": "middleDistal",
-            "radius": 0.1
-        },
-        "ringBase": {
-            "aim": "ringProximal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.3, -0.2], [0.0, 0.0, 0.0]],
-            "parent": "hand",
-            "radius": 0.1
-        },
-        "ringProximal": {
-            "aim": "ringMiddle",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.6, -0.3], [0.0, 0.0, 0.0]],
-            "parent": "ringBase",
-            "radius": 0.1
-        },
-        "ringMiddle": {
-            "aim": "ringDistal",
-            "rotation": 0.0,
-            "world_up": "ringProximal",
-            "transform": [[0.0, -0.8, -0.3], [0.0, 0.0, 0.0]],
-            "parent": "ringProximal",
-            "radius": 0.1
-        },
-        "ringDistal": {
-            "aim": "ringTip",
-            "rotation": 0.0,
-            "world_up": "ringMiddle",
-            "transform": [[0.0, -1.0, -0.3], [0.0, 0.0, 0.0]],
-            "parent": "ringMiddle",
-            "radius": 0.1
-        },
-        "ringTip": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -1.1, -0.3], [0.0, 0.0, 0.0]],
-            "parent": "ringDistal",
-            "radius": 0.1
-        },
-        "pinkyBase": {
-            "aim": "pinkyProximal",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.3, -0.3], [0.0, 0.0, 0.0]],
-            "parent": "hand",
-            "radius": 0.1
-        },
-        "pinkyProximal": {
-            "aim": "pinkyMiddle",
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -0.6, -0.8], [0.0, 0.0, 0.0]],
-            "parent": "pinkyBase",
-            "radius": 0.1
-        },
-        "pinkyMiddle": {
-            "aim": "pinkyDistal",
-            "rotation": 0.0,
-            "world_up": "pinkyProximal",
-            "transform": [[0.0, -0.8, -0.8], [0.0, 0.0, 0.0]],
-            "parent": "pinkyProximal",
-            "radius": 0.1
-        },
-        "pinkyDistal": {
-            "aim": "pinkyTip",
-            "rotation": 0.0,
-            "world_up": "pinkyMiddle",
-            "transform": [[0.0, -1.0, -0.5], [0.0, 0.0, 0.0]],
-            "parent": "pinkyMiddle",
-            "radius": 0.1
-        },
-        "pinkyTip": {
-            "aim": null,
-            "rotation": 0.0,
-            "world_up": null,
-            "transform": [[0.0, -1.2, -0.5], [0.0, 0.0, 0.0]],
-            "parent": "pinkyDistal",
-            "radius": 0.1
+        "JOINTS": {
+            "hand": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": null,
+                "radius": 0.1
+            },
+            "thumbBase": {
+                "aim": "thumbProximal",
+                "rotation": 0.0,
+                "world_up": "thumbTip",
+                "transform": [[0.0, -2.0, 2.0], [0.0, 0.0, 0.0]],
+                "parent": "hand",
+                "radius": 0.1
+            },
+            "thumbProximal": {
+                "aim": "thumbDistal",
+                "rotation": 0.0,
+                "world_up": "thumbTip",
+                "transform": [[-1.0, -3.0, 3.0], [0.0, 0.0, 0.0]],
+                "parent": "thumbBase",
+                "radius": 0.1
+            },
+            "thumbDistal": {
+                "aim": "thumbTip",
+                "rotation": 0.0,
+                "world_up": "thumbTip",
+                "transform": [[-2.0, -5.0, 5.0], [0.0, 0.0, 0.0]],
+                "parent": "thumbProximal",
+                "radius": 0.1
+            },
+            "thumbTip": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[-2.0, -7.0, 7.0], [0.0, 0.0, 0.0]],
+                "parent": "thumbDistal",
+                "radius": 0.1
+            },
+            "indexBase": {
+                "aim": "indexProximal",
+                "rotation": 0.0,
+                "world_up": "indexTip",
+                "transform": [[0.0, -3.0, 1.0], [0.0, 0.0, 0.0]],
+                "parent": "hand",
+                "radius": 0.1
+            },
+            "indexProximal": {
+                "aim": "indexMiddle",
+                "rotation": 0.0,
+                "world_up": "indexTip",
+                "transform": [[0.0, -7.0, 1.0], [0.0, 0.0, 0.0]],
+                "parent": "indexBase",
+                "radius": 0.1
+            },
+            "indexMiddle": {
+                "aim": "indexDistal",
+                "rotation": 0.0,
+                "world_up": "indexTip",
+                "transform": [[0.0, -10.0, 1.0], [0.0, 0.0, 0.0]],
+                "parent": "indexProximal",
+                "radius": 0.1
+            },
+            "indexDistal": {
+                "aim": "indexTip",
+                "rotation": 0.0,
+                "world_up": "indexTip",
+                "transform": [[0.0, -12.0, 1.0], [0.0, 0.0, 0.0]],
+                "parent": "indexMiddle",
+                "radius": 0.1
+            },
+            "indexTip": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[0.0, -14.0, 1.0], [0.0, 0.0, 0.0]],
+                "parent": "indexDistal",
+                "radius": 0.1
+            },
+            "middleBase": {
+                "aim": "middleProximal",
+                "rotation": 0.0,
+                "world_up": "middleTip",
+                "transform": [[0.0, -3.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": "hand",
+                "radius": 0.1
+            },
+            "middleProximal": {
+                "aim": "middleMiddle",
+                "rotation": 0.0,
+                "world_up": "middleTip",
+                "transform": [[0.0, -7.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": "middleBase",
+                "radius": 0.1
+            },
+            "middleMiddle": {
+                "aim": "middleDistal",
+                "rotation": 0.0,
+                "world_up": "middleTip",
+                "transform": [[0.0, -10.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": "middleProximal",
+                "radius": 0.1
+            },
+            "middleDistal": {
+                "aim": "middleTip",
+                "rotation": 0.0,
+                "world_up": "middleTip",
+                "transform": [[0.0, -12.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": "middleMiddle",
+                "radius": 0.1
+            },
+            "middleTip": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[0.0, -14.0, 0.0], [0.0, 0.0, 0.0]],
+                "parent": "middleDistal",
+                "radius": 0.1
+            },
+            "ringBase": {
+                "aim": "ringProximal",
+                "rotation": 0.0,
+                "world_up": "ringTip",
+                "transform": [[0.0, -3.0, -1.0], [0.0, 0.0, 0.0]],
+                "parent": "hand",
+                "radius": 0.1
+            },
+            "ringProximal": {
+                "aim": "ringMiddle",
+                "rotation": 0.0,
+                "world_up": "ringTip",
+                "transform": [[0.0, -7.0, -1.0], [0.0, 0.0, 0.0]],
+                "parent": "ringBase",
+                "radius": 0.1
+            },
+            "ringMiddle": {
+                "aim": "ringDistal",
+                "rotation": 0.0,
+                "world_up": "ringTip",
+                "transform": [[0.0, -10.0, -1.0], [0.0, 0.0, 0.0]],
+                "parent": "ringProximal",
+                "radius": 0.1
+            },
+            "ringDistal": {
+                "aim": "ringTip",
+                "rotation": 0.0,
+                "world_up": "ringTip",
+                "transform": [[0.0, -12.0, -1.0], [0.0, 0.0, 0.0]],
+                "parent": "ringMiddle",
+                "radius": 0.1
+            },
+            "ringTip": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[0.0, -14.0, -1.0], [0.0, 0.0, 0.0]],
+                "parent": "ringDistal",
+                "radius": 0.1
+            },
+            "pinkyBase": {
+                "aim": "pinkyProximal",
+                "rotation": 0.0,
+                "world_up": "pinkyTip",
+                "transform": [[0.0, -3.0, -2.0], [0.0, 0.0, 0.0]],
+                "parent": "hand",
+                "radius": 0.1
+            },
+            "pinkyProximal": {
+                "aim": "pinkyMiddle",
+                "rotation": 0.0,
+                "world_up": "pinkyTip",
+                "transform": [[0.0, -7.0, -2.0], [0.0, 0.0, 0.0]],
+                "parent": "pinkyBase",
+                "radius": 0.1
+            },
+            "pinkyMiddle": {
+                "aim": "pinkyDistal",
+                "rotation": 0.0,
+                "world_up": "pinkyTip",
+                "transform": [[0.0, -10.0, -2.0], [0.0, 0.0, 0.0]],
+                "parent": "pinkyProximal",
+                "radius": 0.1
+            },
+            "pinkyDistal": {
+                "aim": "pinkyTip",
+                "rotation": 0.0,
+                "world_up": "pinkyTip|",
+                "transform": [[0.0, -12.0, -2.0], [0.0, 0.0, 0.0]],
+                "parent": "pinkyMiddle",
+                "radius": 0.1
+            },
+            "pinkyTip": {
+                "aim": null,
+                "rotation": 0.0,
+                "world_up": null,
+                "transform": [[0.0, -14.0, -2.0], [0.0, 0.0, 0.0]],
+                "parent": "pinkyDistal",
+                "radius": 0.1
+            }
         }
     }
 }
